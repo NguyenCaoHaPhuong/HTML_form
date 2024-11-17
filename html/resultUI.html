@@ -41,10 +41,8 @@
 
     <script>
         window.onload = function() {
-            // Lấy dữ liệu từ localStorage
             const planetInfo = JSON.parse(localStorage.getItem('planetInfo'));
 
-            // Hiển thị dữ liệu lên trang
             document.getElementById('planet_name').textContent = planetInfo.planet_name;
             document.getElementById('discovery_date').textContent = planetInfo.discovery_date;
             document.getElementById('planet_type').textContent = planetInfo.planet_type;
@@ -53,7 +51,6 @@
             document.getElementById('password').textContent = planetInfo.password;
             document.getElementById('brightness').textContent = planetInfo.brightness;
 
-            // Hiển thị ảnh hành tinh nếu có (dưới dạng base64)
             const planetImage = planetInfo.planet_image ? planetInfo.planet_image : '';
             if (planetImage) {
                 document.getElementById('planet_image').src = planetImage; // Hiển thị ảnh base64
